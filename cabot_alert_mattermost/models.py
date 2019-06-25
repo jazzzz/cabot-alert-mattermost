@@ -58,7 +58,7 @@ class MattermostAlert(AlertPlugin):
         if service.overall_status == service.WARNING_STATUS:
             alert = False  # Don't alert at all for WARNING
         if service.overall_status == service.ERROR_STATUS:
-            if service.old_overall_status in (service.ERROR_STATUS, service.ERROR_STATUS):
+            if service.old_overall_status == service.ERROR_STATUS:
                 alert = False  # Don't alert repeatedly for ERROR
         if service.overall_status == service.PASSING_STATUS:
             if service.old_overall_status == service.WARNING_STATUS:
