@@ -81,12 +81,12 @@ class MattermostAlert(AlertPlugin):
         url = env.get('MATTERMOST_WEBHOOK_URL')
         icon_url = env.get('MATTERMOST_ICON_URL')
 
-        resp = requests.post(url, data=json.dumps({
+        resp = requests.post(url, json={
             'text': message,
             'channel': channel,
             'username': sender,
             'icon_url': icon_url,
-        }))
+        })
 
 class MattermostAlertUserData(AlertPluginUserData):
     name = "Mattermost Plugin"
