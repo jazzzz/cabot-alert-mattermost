@@ -13,7 +13,7 @@ It allows you to alert users by their user handle in a Mattermost channel.
 Install using pip:
 
 ```
-    $ pip install https://github.com/jazzzz/cabot-alert-mattermost/archive/1.0.0.zip
+    $ pip install https://github.com/jazzzz/cabot-alert-mattermost/archive/1.0.1.zip
 ```
 
 Edit `conf/production.env` in your Cabot clone to include the plugin:
